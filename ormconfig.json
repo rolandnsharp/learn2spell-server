@@ -1,0 +1,22 @@
+{
+  "type": "postgres",
+  "extra": {
+    "ssl": true
+  },
+  "synchronize": false,
+  "logging": true,
+  "entities": [
+    "build/entity/*.js"
+  ],
+  "subscribers": [
+    "build/subscriber/*.js"
+  ],
+  "migrations": [
+    "build/migration/*.js"
+  ],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
+}

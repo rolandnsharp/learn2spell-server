@@ -1,0 +1,41 @@
+{
+   "name": "learn2spell-server",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "scripts": {
+      "start": "tsc && node build/server.js",
+      "watch": "tsc && concurrently \"tsc -w\" \"node build/server.js\"",
+      "test": "ava --verbose ./test/*_test.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/rolandnsharp/learn2spell-server.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/rolandnsharp/learn2spell-server/issues"
+   },
+   "homepage": "https://github.com/rolandnsharp/learn2spell-server#readme",
+   "dependencies": {
+      "@koa/cors": "^3.0.0",
+      "@koa/multer": "^2.0.2",
+      "@types/node": "^8.0.29",
+      "koa": "^2.11.0",
+      "koa-bodyparser": "^4.2.1",
+      "koa-generic-session": "^2.0.4",
+      "koa-redis": "^4.0.1",
+      "koa-router": "^7.4.0",
+      "multer": "^1.4.2",
+      "pg": "^7.17.1",
+      "postmark": "^2.3.4",
+      "reflect-metadata": "^0.1.10",
+      "twilio": "^3.39.2",
+      "typeorm": "0.2.22",
+      "typescript": "3.3.3333"
+   },
+   "devDependencies": {
+      "ava": "^2.4.0",
+      "ts-node": "3.3.0"
+   }
+}

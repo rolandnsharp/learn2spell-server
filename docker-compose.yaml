@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  pg:
+    image: postgres
+    volumes:
+      - pg-volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_DB=test
+      - POSTGRES_PASSWORD=Test123
+    ports:
+      - 5432:5432
+volumes:
+  pg-volume:
