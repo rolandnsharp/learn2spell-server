@@ -9,11 +9,6 @@ import * as session from 'koa-generic-session'
 import { AppRoutes } from './routes'
 import config from './config'
 
-import uploadDocument from './controller/document/uploadDocument'
-// import * as multer from '@koa/multer'
-const multer = require('@koa/multer')
-// import {User} from "./entity/User";
-
 createConnection().then(async connection => {
 
     const app = new Koa()
@@ -31,15 +26,11 @@ createConnection().then(async connection => {
 
     app.use(session({
         store: redisStore({ url: config.redis.url }),
-        cookie: { domain: '.remittance-server.herokuapp.com' },
+        cookie: { domain: '.learn2spell-app.herokuapp.com' },
     }))
 
 
     const router = new Router()
-
-    const upload = multer() // note you can pass `multer` options here                          
-    // add a route for uploading single files
-    router.post('/document', upload.single('document'), uploadDocument)
 
     AppRoutes.forEach(route => router[route.method](route.path, route.action))
     app.use(router.routes())
