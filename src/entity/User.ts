@@ -1,5 +1,5 @@
 import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from 'typeorm';
-
+import {List} from './List'
 @Entity()
 export class User {
 
@@ -23,7 +23,7 @@ export class User {
     @Column({ default: false })
     isVerified: boolean
 
-    // @OneToMany(type => Document, document => document.user)
-    // documents: Document[];
+    @OneToMany(type => List, list => list.user)
+    lists: List[];
 
 }
