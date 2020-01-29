@@ -2,7 +2,7 @@ import { env } from 'process'
 
 const config = {
   app: {
-    url: 'https://learn2spell-client.herokuapp.com'
+    url: 'https://learn2spell-app.herokuapp.com'
   },
   api: {
     url: 'https://learn2spell-server.herokuapp.com'
